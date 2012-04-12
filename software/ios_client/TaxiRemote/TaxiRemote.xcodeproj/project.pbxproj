@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		496E24F51536DD5600ED88E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496E24F41536DD5600ED88E6 /* UIKit.framework */; };
+		496E24F71536DD5600ED88E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496E24F61536DD5600ED88E6 /* Foundation.framework */; };
+		496E24F91536DD5600ED88E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 496E24F81536DD5600ED88E6 /* CoreGraphics.framework */; };
+		496E24FF1536DD5600ED88E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 496E24FD1536DD5600ED88E6 /* InfoPlist.strings */; };
+		496E25011536DD5600ED88E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 496E25001536DD5600ED88E6 /* main.m */; };
+		496E25051536DD5600ED88E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 496E25041536DD5600ED88E6 /* AppDelegate.m */; };
+		496E250F1536E63600ED88E6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 496E250D1536E63600ED88E6 /* ViewController.m */; };
+		496E25101536E63600ED88E6 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496E250E1536E63600ED88E6 /* ViewController.xib */; };
+		496E25141536E7CC00ED88E6 /* HttpHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 496E25131536E7CC00ED88E6 /* HttpHelper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		496E24F01536DD5600ED88E6 /* TaxiRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxiRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		496E24F41536DD5600ED88E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		496E24F61536DD5600ED88E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		496E24F81536DD5600ED88E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		496E24FC1536DD5600ED88E6 /* TaxiRemote-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TaxiRemote-Info.plist"; sourceTree = "<group>"; };
+		496E24FE1536DD5600ED88E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		496E25001536DD5600ED88E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		496E25021536DD5600ED88E6 /* TaxiRemote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TaxiRemote-Prefix.pch"; sourceTree = "<group>"; };
+		496E25031536DD5600ED88E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		496E25041536DD5600ED88E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		496E250C1536E63600ED88E6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		496E250D1536E63600ED88E6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		496E250E1536E63600ED88E6 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		496E25121536E7CC00ED88E6 /* HttpHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpHelper.h; sourceTree = "<group>"; };
+		496E25131536E7CC00ED88E6 /* HttpHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpHelper.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		496E24ED1536DD5600ED88E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496E24F51536DD5600ED88E6 /* UIKit.framework in Frameworks */,
+				496E24F71536DD5600ED88E6 /* Foundation.framework in Frameworks */,
+				496E24F91536DD5600ED88E6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		496E24E51536DD5600ED88E6 = {
+			isa = PBXGroup;
+			children = (
+				496E24FA1536DD5600ED88E6 /* TaxiRemote */,
+				496E24F31536DD5600ED88E6 /* Frameworks */,
+				496E24F11536DD5600ED88E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		496E24F11536DD5600ED88E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				496E24F01536DD5600ED88E6 /* TaxiRemote.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		496E24F31536DD5600ED88E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				496E24F41536DD5600ED88E6 /* UIKit.framework */,
+				496E24F61536DD5600ED88E6 /* Foundation.framework */,
+				496E24F81536DD5600ED88E6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		496E24FA1536DD5600ED88E6 /* TaxiRemote */ = {
+			isa = PBXGroup;
+			children = (
+				496E25111536E7CC00ED88E6 /* utils */,
+				496E250B1536E63600ED88E6 /* controller */,
+				496E25031536DD5600ED88E6 /* AppDelegate.h */,
+				496E25041536DD5600ED88E6 /* AppDelegate.m */,
+				496E24FB1536DD5600ED88E6 /* Supporting Files */,
+			);
+			path = TaxiRemote;
+			sourceTree = "<group>";
+		};
+		496E24FB1536DD5600ED88E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				496E24FC1536DD5600ED88E6 /* TaxiRemote-Info.plist */,
+				496E24FD1536DD5600ED88E6 /* InfoPlist.strings */,
+				496E25001536DD5600ED88E6 /* main.m */,
+				496E25021536DD5600ED88E6 /* TaxiRemote-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		496E250B1536E63600ED88E6 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				496E250C1536E63600ED88E6 /* ViewController.h */,
+				496E250D1536E63600ED88E6 /* ViewController.m */,
+				496E250E1536E63600ED88E6 /* ViewController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		496E25111536E7CC00ED88E6 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				496E25121536E7CC00ED88E6 /* HttpHelper.h */,
+				496E25131536E7CC00ED88E6 /* HttpHelper.m */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		496E24EF1536DD5600ED88E6 /* TaxiRemote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 496E25081536DD5600ED88E6 /* Build configuration list for PBXNativeTarget "TaxiRemote" */;
+			buildPhases = (
+				496E24EC1536DD5600ED88E6 /* Sources */,
+				496E24ED1536DD5600ED88E6 /* Frameworks */,
+				496E24EE1536DD5600ED88E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaxiRemote;
+			productName = TaxiRemote;
+			productReference = 496E24F01536DD5600ED88E6 /* TaxiRemote.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		496E24E71536DD5600ED88E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 496E24EA1536DD5600ED88E6 /* Build configuration list for PBXProject "TaxiRemote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 496E24E51536DD5600ED88E6;
+			productRefGroup = 496E24F11536DD5600ED88E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				496E24EF1536DD5600ED88E6 /* TaxiRemote */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		496E24EE1536DD5600ED88E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496E24FF1536DD5600ED88E6 /* InfoPlist.strings in Resources */,
+				496E25101536E63600ED88E6 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		496E24EC1536DD5600ED88E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496E25011536DD5600ED88E6 /* main.m in Sources */,
+				496E25051536DD5600ED88E6 /* AppDelegate.m in Sources */,
+				496E250F1536E63600ED88E6 /* ViewController.m in Sources */,
+				496E25141536E7CC00ED88E6 /* HttpHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		496E24FD1536DD5600ED88E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				496E24FE1536DD5600ED88E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		496E25061536DD5600ED88E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		496E25071536DD5600ED88E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		496E25091536DD5600ED88E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TaxiRemote/TaxiRemote-Prefix.pch";
+				INFOPLIST_FILE = "TaxiRemote/TaxiRemote-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		496E250A1536DD5600ED88E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TaxiRemote/TaxiRemote-Prefix.pch";
+				INFOPLIST_FILE = "TaxiRemote/TaxiRemote-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		496E24EA1536DD5600ED88E6 /* Build configuration list for PBXProject "TaxiRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				496E25061536DD5600ED88E6 /* Debug */,
+				496E25071536DD5600ED88E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		496E25081536DD5600ED88E6 /* Build configuration list for PBXNativeTarget "TaxiRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				496E25091536DD5600ED88E6 /* Debug */,
+				496E250A1536DD5600ED88E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 496E24E71536DD5600ED88E6 /* Project object */;
+}
