@@ -1,0 +1,180 @@
+834,857d833
+< ////////////////////////////////////////////////////////////////////////////FIXME@GAVIN
+<     } else if(strstr(buffer, "GET /?action=fire") != NULL) {
+<     	req.type = A_FIRE;
+<     	input_suffixed = 255;
+<     } else if(strstr(buffer, "GET /?action=forward_on") != NULL) {
+<     	req.type = A_FORWARD;
+<     	input_suffixed = 255;
+<     } else if(strstr(buffer, "GET /?action=right_on") != NULL) {
+<     	req.type = A_RIGHT;
+<     	input_suffixed = 255;
+<     } else if(strstr(buffer, "GET /?action=left_on") != NULL) {
+<     	req.type = A_LEFT;
+<     	input_suffixed = 255;
+<     } else if(strstr(buffer, "GET /?action=left_off") != NULL) {
+<         req.type = A_LEFT_OFF;
+<         input_suffixed = 255;
+<     } else if(strstr(buffer, "GET /?action=right_off") != NULL) {
+<         req.type = A_RIGHT_OFF;
+<         input_suffixed = 255;
+<     } else if(strstr(buffer, "GET /?action=forward_off") != NULL) {
+<         req.type = A_FORWARD_OFF;
+<         input_suffixed = 255;
+< 
+< ////////////////////////////////////////////////////////////////////////////
+980,1133d955
+< //FIXME@GAVIN
+<     case A_FIRE:
+<     	DBG("Request for scripts of control gpio from http server");
+< 		if (system("/gpio_ctl_script/fire.sh") >= 0) {
+< 			sprintf(buffer, "HTTP/1.0 200 OK\r\n" \
+< 			STD_HEADER \
+< 			"Content-type: text/html\r\n" \
+< 			"\r\n" \
+< 			"<html>\r\n" \
+< 			 "<head/>\r\n" \
+< 				"<body> \r\n" \
+< 					"gpio138 \r\n" \
+< 						"</body>\r\n" \
+< 			"</html>\r\n" \
+< 			"\r\n");
+< 
+< 			if (write(lcfd.fd, buffer, strlen(buffer)) < 0) {
+< 				DBG("send header failed\n");
+< 			}
+< 		}
+< 		else	DBG("fire script fails\n");
+< 		break;
+< 
+<     case A_FORWARD:
+<     	DBG("Request for scripts of control gpio from http server");
+< 		if (system("/gpio_ctl_script/forward_on.sh") >= 0) {
+< 			sprintf(buffer, "HTTP/1.0 200 OK\r\n" \
+< 			STD_HEADER \
+< 			"Content-type: text/html\r\n" \
+< 			"\r\n" \
+< 			"<html>\r\n" \
+< 			 "<head/>\r\n" \
+< 				"<body> \r\n" \
+< 					"gpio136 \r\n" \
+< 					 "gpio137 \r\n" \
+< 						"</body>\r\n" \
+< 			"</html>\r\n" \
+< 			"\r\n");
+< 
+< 			if (write(lcfd.fd, buffer, strlen(buffer)) < 0) {
+< 				DBG("send header failed\n");
+< 			}
+< 		}
+< 		else	DBG("forward_on script fails\n");
+< 		break;
+< 
+<     case A_RIGHT:
+<     	DBG("Request for scripts of control gpio from http server");
+< 		if (system("/gpio_ctl_script/turn_Ron.sh") >= 0) {
+< 			sprintf(buffer, "HTTP/1.0 200 OK\r\n" \
+< 			STD_HEADER \
+< 			"Content-type: text/html\r\n" \
+< 			"\r\n" \
+< 			"<html>\r\n" \
+< 			 "<head/>\r\n" \
+< 				"<body> \r\n" \
+< 					"gpio136 \r\n" \
+< 						"</body>\r\n" \
+< 			"</html>\r\n" \
+< 			"\r\n");
+< 
+< 			if (write(lcfd.fd, buffer, strlen(buffer)) < 0) {
+< 				DBG("send header failed\n");
+< 			}
+< 		}
+< 		else	DBG("turn_Ron script fails\n");
+< 		break;
+< 
+<     case A_LEFT:
+<     	DBG("Request for scripts of control gpio from http server");
+< 		if (system("/gpio_ctl_script/turn_Lon.sh") >= 0) {
+< 			sprintf(buffer, "HTTP/1.0 200 OK\r\n" \
+< 			STD_HEADER \
+< 			"Content-type: text/html\r\n" \
+< 			"\r\n" \
+< 			"<html>\r\n" \
+< 			 "<head/>\r\n" \
+< 				"<body> \r\n" \
+< 					"gpio137 \r\n" \
+< 						"</body>\r\n" \
+< 			"</html>\r\n" \
+< 			"\r\n");
+< 
+< 			if (write(lcfd.fd, buffer, strlen(buffer)) < 0) {
+< 				DBG("send header failed\n");
+< 			}
+< 		}
+< 		else	DBG("turn_Lon script fails\n");
+< 		break;
+<     case A_LEFT_OFF:
+< 		DBG("Request for scripts of control gpio from http server");
+< 		if (system("/gpio_ctl_script/turn_Loff.sh") >= 0) {
+< 			sprintf(buffer, "HTTP/1.0 200 OK\r\n" \
+< 			STD_HEADER \
+< 			"Content-type: text/html\r\n" \
+< 			"\r\n"	\
+< 			"<html>\r\n" \
+< 			"<head/>\r\n" \
+< 			"<body> \r\n" \
+< 			"gpio137off \r\n" \
+< 			"</body>\r\n" \
+< 			"</html>\r\n" \
+< 			"\r\n");
+< 
+< 			if (write(lcfd.fd, buffer, strlen(buffer)) < 0) {
+< 				DBG("send header failed\n");
+< 			}
+< 		} else
+< 			DBG("turn_Loff script fails\n");
+< 		break;
+<     case A_RIGHT_OFF:
+< 		DBG("Request for scripts of control gpio from http server");
+< 		if (system("/gpio_ctl_script/turn_Roff.sh") >= 0) {
+< 			sprintf(buffer, "HTTP/1.0 200 OK\r\n" \
+< 			STD_HEADER \
+< 			"Content-type: text/html\r\n" \
+< 			"\r\n" \
+< 			"<html>\r\n" \
+< 			"<head/>\r\n" \
+< 			"<body> \r\n" \
+< 			"gpio136off \r\n" \
+< 			"</body>\r\n" \
+< 			"</html>\r\n" \
+< 			"\r\n");
+< 
+< 			if (write(lcfd.fd, buffer, strlen(buffer)) < 0) {
+< 				DBG("send header failed\n");
+< 			}
+< 		} else
+< 			DBG("turn_Roff script fails\n");
+< 		break;
+<     case A_FORWARD_OFF:
+< 		DBG("Request for scripts of control gpio from http server");
+< 		if (system("/gpio_ctl_script/forward_off.sh") >= 0) {
+< 			sprintf(buffer, "HTTP/1.0 200 OK\r\n" \
+< 			STD_HEADER \
+< 			"Content-type: text/html\r\n" \
+< 			"\r\n" \
+< 			"<html>\r\n" \
+< 			"<head/>\r\n" \
+< 			"<body> \r\n" \
+< 			"gpio136off \r\n" \
+< 			"gpio137off \r\n" \
+< 			"</body>\r\n" \
+< 			"</html>\r\n" \
+< 			"\r\n");
+< 
+< 			if (write(lcfd.fd, buffer, strlen(buffer)) < 0) {
+< 				DBG("send header failed\n");
+< 			}
+< 		} else
+< 			DBG("forward_off script fails\n");
+< 		break;
+< ////////////////////////////////////////////////////////////////////
