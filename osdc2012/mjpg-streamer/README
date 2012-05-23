@@ -1,0 +1,9 @@
+1.download address:
+	http://mjpg-streamer.svn.sourceforge.net/viewvc/mjpg-streamer/ 
+
+2.ggsinit.sh是要自己手動寫的script(最後放在系統/root下)
+3.修改的部份在絕對位置都有相關的patch檔 打上patch即可
+
+補充：
+ 編譯另外需要jpeg-6b lib(jpegsrc.v6b.tar.gz):
+  http://www.ijg.org/files/
