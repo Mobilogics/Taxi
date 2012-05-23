@@ -1,0 +1,4 @@
+1.參考：HOWTO Watch Mjpg-stream by remote device
+2.下載四個需要的檔案 （路徑皆在各自資料夾README中）
+3.根據PATCH資料夾中需修改的位置打上補丁
+4.gpio_ctl_script.tar.gz是控制gpio script

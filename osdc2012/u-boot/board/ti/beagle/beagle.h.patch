@@ -1,0 +1,10 @@
+218,221c218,221
+< 	MUX_VAL(CP(MMC2_DAT4),		(IEN  | PTU | EN  | M4)) /*GPIO_136*/\
+< 	MUX_VAL(CP(MMC2_DAT5),		(IEN  | PTU | EN  | M4)) /*GPIO_137*/\
+< 	MUX_VAL(CP(MMC2_DAT6),		(IEN  | PTU | EN  | M4)) /*GPIO_138*/\
+< 	MUX_VAL(CP(MMC2_DAT7),		(IEN  | PTU | EN  | M4)) /*GPIO_139*/\
+---
+> 	MUX_VAL(CP(MMC2_DAT4),		(IEN  | PTD | EN  | M4)) /*GPIO_136*/\
+> 	MUX_VAL(CP(MMC2_DAT5),		(IEN  | PTD | EN  | M4)) /*GPIO_137*/\
+> 	MUX_VAL(CP(MMC2_DAT6),		(IEN  | PTD | EN  | M4)) /*GPIO_138*/\
+> 	MUX_VAL(CP(MMC2_DAT7),		(IEN  | PTD | EN  | M4)) /*GPIO_139*/\
